@@ -1,3 +1,4 @@
+/* regole generali e regole valide per risoluzione fino a 480px */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +12,7 @@ nav {
     width: 100%;
     min-height: 50px;
     border: 1px dashed red;
+    padding: 0 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,7 +32,13 @@ nav .nav-item {
     width: 100%;
     border: 1px dashed red;
 }
+.container-foot {
+    border: 1px dashed purple;
+    padding: 1rem 0;
+    height: 150px;
+}
 .row {
+    width: 100%;
     padding: 0 1rem;
     display: flex;
     flex-direction: row;
@@ -41,11 +49,23 @@ nav .nav-item {
     flex-basis: 100%;
     border: 1px dashed green;
     height: 100px;
+    overflow: auto;
+}
+.col-short {
+    height: 50px;
+    padding: 0 1rem;
+}
+.col-long {
+    height: 250px;
+}
+.col-img, .col-caption {
+    border: 1px dashed black;
 }
 .big {
     height: 200px;
 }
 #first-section {
+    border: 1px dashed orangered;
     width: 100%;
     padding: 1rem 0 2rem;
 }
@@ -54,5 +74,107 @@ nav .nav-item {
     border: 1px dashed red;
 }
 #second-section {
+    border: 1px dashed orangered;
+    width: 100%;
     padding: 1rem 0 4rem;
+}
+#third-section {
+    border: 1px dashed orangered;
+    width: 100%;
+    padding: 1rem 0 2rem;
+}
+#fourth-section {
+    border: 1px dashed orangered;
+    width: 100%;
+    padding: 3rem 0 2rem;
+}
+#fifth-section {
+    border: 1px dashed orangered;
+    width: 100%;
+    padding: 2rem 0;
+}
+footer {
+    border: 1px dashed palevioletred;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+/* media queries */
+/* tablet da un minimo di 481px */
+@media screen and (min-width: 481px) {
+    nav {
+        padding: 0 2rem;
+    }
+    .row {
+        padding: 0 2rem;
+    }
+    .col-short {
+        padding: 0 2rem;
+    }
+    footer {
+        padding: 2rem;
+    }
+    .col-tablet-2-3 {
+        flex-basis: calc((100% / 3) * 2);
+        flex-grow: 1;
+    }
+    .col-tablet-1-3 {
+        flex-basis: calc(100% / 3);
+        flex-grow: 1;
+    }
+    #col-big {
+        height: 200px;
+    }
+    .flex-card {
+        display: flex;
+        flex-direction: row;
+    }
+    .col-img {
+        flex-basis: 30%;
+        flex-grow: 1;
+    }
+    .col-caption {
+        flex-basis: 70%;
+        flex-grow: 1;
+    }
+    .col-tablet-1-2 {
+        flex-basis: 50%;
+        flex-grow: 1;
+    }
+}
+/* desktop da un minimo di 768px */
+@media screen and (min-width: 768px) {
+    nav, #hero-banner .row, .container-desktop {
+        max-width: 884px; /* misura massima a cui sommo 2rem per lato di padding */
+        margin: auto;
+    }
+    #first-section .row {
+        width: 85%;
+        margin: auto;
+    }
+    .col-desktop-1-2 {
+        flex-basis: 50%;
+        flex-grow: 1;
+    }
+    .col-desktop-1-3 {
+        flex-basis: calc(100% / 3);
+        flex-grow: 1;
+    }
+    .col-desktop-about-us {
+        flex-basis: 60%;
+        flex-grow: 1;
+    }
+    .col-desktop-img {
+        flex-basis: 40%;
+        flex-grow: 1;
+    }
+    .fifth-section-row {
+        justify-content: center;
+    }
+    .fifth-section-col {
+        flex-basis: 60%;
+    }
+    footer .container-foot {
+        width: 50%;
+        margin: auto;
+    }
 }
