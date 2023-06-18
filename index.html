@@ -13,18 +13,31 @@
 
 <body>
     <header>
-        <nav>
-            <div class="nav-item">
-                <img src="images/logo.png" alt="logo">
-            </div>
-            <div class="nav-item">
-                <i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i>
-            </div>
-        </nav>
+        <div class="nav-container">
+            <nav>
+                <div class="nav-item">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div class="nav-item">
+                    <!-- sotto-barra di navigazione nascosta che compare solo alla risoluzione desktop dai 768px in su -->
+                    <div class="hidden-nav-container">
+                        <div class="hidden-nav">
+                            <div class="hidden-item">Planning</div>
+                            <div class="hidden-item">Testimonials</div>
+                            <div class="hidden-item">Features</div>
+                            <div class="hidden-item">About Us</div>
+                            <span class="button btn-white">Get Started</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i>
+                </div>
+            </nav>
+        </div>
         <section id="hero-banner">
             <div class="container">
                 <div class="row">
-                    <div class="col column-flex col-tablet-2-3 tablet-margin card-primary item-padding-zero">
+                    <div
+                        class="col column-flex col-tablet-2-3 tablet-margin card-primary item-padding-zero col-big-desktop">
                         <div class="column-item" id="first-column-item">
                             <h3>Get a demo application</h3>
                             <p>Lorem ipsum dolor sit amet. Eos mollitia maiores aut nobis asperiores et quae animi. Eos
@@ -98,10 +111,10 @@
     </header>
 
     <main>
-        <section class="purple-section">
+        <section class="purple-section sec-desktop-padding">
             <div class="container container-desktop">
                 <div class="row">
-                    <div class="col col-desktop-1-2">
+                    <div class="col col-desktop-1-2 col-desktop-1-2-margin">
                         <div class="img-container">
                             <img src="images/planning1.png" alt="planning1">
                         </div>
@@ -114,7 +127,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col col-desktop-1-2 card-white">
+                    <div class="col col-desktop-1-2 card-white col-desktop-1-2-margin">
                         <div>
                             <img class="img-card-white" src="images/planning2.png" alt="planning2">
                         </div>
@@ -212,7 +225,8 @@
                         <h3 class="subtitle">Creative Team</h3>
                         <p class="second-caption">
                             Et eligendi quisquam sed vitae vero qui odit accusamus sit quia tempora ut saepe nihil. Sit
-                            error delectus ab similique dolor ab deleniti error. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores omnis possimus.
+                            error delectus ab similique dolor ab deleniti error. Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit. Ex maiores omnis.
                         </p>
                         <span class="button btn-more">more</span>
                     </div>
@@ -221,7 +235,8 @@
                         <h3 class="subtitle">Amazing Results</h3>
                         <p class="second-caption">
                             Et minus laboriosam ad praesentium voluptate id repudiandae amet ut odit dolor. Qui
-                            excepturi nihil qui dolorum ducimus hic dolore libero aut aliquam, hic molestias enim vel voluptates illo sed deserunt, amet ut odit dolor.
+                            excepturi nihil qui dolorum ducimus hic dolore libero aut aliquam, hic molestias enim vel
+                            voluptates illo sed deserunt.
                         </p>
                         <span class="button btn-more">more</span>
                     </div>
@@ -240,8 +255,8 @@
                         <h3 class="subtitle">Innovations</h3>
                         <p class="second-caption">
                             Aut quasi suscipit ab reiciendis facere eos amet necessitatibus ut obcaecati quidem qui
-                            tempora dolor ut culpa eveniet eos aliquam sint. Aut eligendi dolores et galisum eveniet. 
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            tempora dolor ut culpa eveniet eos aliquam sint. Aut eligendi dolores et galisum eveniet.
+                            Lorem ipsum dolor, sit amet consectetur.
                         </p>
                         <span class="button btn-more">more</span>
                     </div>
@@ -321,7 +336,7 @@
                 voluptas Quis aut deleniti exercitationem sed temporibus eveniet.
             </p>
             <div>
-                <a href="#">Lorem ipsum</a> et optio cumque eum tempora quibusdam 
+                <a href="#">Lorem ipsum</a> et optio cumque eum tempora quibusdam
                 <a href="#">Boolean Careers</a>
             </div>
         </div>

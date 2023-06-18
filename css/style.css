@@ -31,6 +31,9 @@ nav .nav-item:last-child {
 nav .nav-item img {
     width: 100%;
 }
+.hidden-nav-container {
+    display: none;
+}
 #hero-banner {
     width: 100%;
     padding: 2.5rem 0 2rem 0;
@@ -119,6 +122,12 @@ nav .nav-item img {
     cursor: pointer;
     font-size: medium;
     text-align: center;
+}
+.btn-white {
+    background-color: white;
+    color: black;
+    padding: 18px 15px;
+    line-height: 0;
 }
 .btn-more {
     background-color: var(--bg-purple);
@@ -377,8 +386,8 @@ footer {
         flex-basis: calc((100% / 3) - (10px * 2));
         flex-grow: 1;
     }
-    #col-big {
-        min-height: 200px;
+    #about-title {
+        font-size: 35px;
     }
     .flex-card {
         display: flex;
@@ -407,16 +416,62 @@ footer {
         max-width: 884px; /* misura massima a cui sommo 2rem per lato di padding */
         margin: auto;
     }
+    nav .nav-item:first-child {
+        margin-left: 10px;
+    }
+    .nav-container {
+        width: 100%;
+        background-color: #0082F9;
+    }
+    nav .nav-item:last-child {
+        margin-right: 10px;
+    }
     #first-section .row {
         width: 85%;
         margin: auto;
     }
-    .col-desktop-1-2 {
+    .col-big-desktop {
+        display: flex;
+        flex-direction: row;
+    }
+    .column-item {
         flex-basis: 50%;
         flex-grow: 1;
     }
+    #phone-item {
+        position: relative;
+    }
+    #phone-item img {
+        position: absolute;
+        bottom: 0;
+        width: 250px;
+        height: 290px;
+        max-width: 250px;
+        max-height: 290px;
+    }
+    .col-desktop-1-2 {
+        flex-basis: calc(50% - (15px * 2));
+        flex-grow: 1;
+    }
+    .col-desktop-1-2-margin {
+        margin: 0 15px;
+    }
+    .sec-desktop-padding {
+        padding: 200px 0 2rem;
+    }
+    .img-container img {
+        position: relative;
+        top: -90px;
+    }
+    .purple-title {
+        margin-top: 35px;
+    }
+    #par {
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
     .col-desktop-1-3 {
-        flex-basis: calc(100% / 3);
+        flex-basis: calc((100% / 3) - (10px * 2));
         flex-grow: 1;
     }
     .col-desktop-about-us {
@@ -436,5 +491,22 @@ footer {
     footer .container-foot {
         width: 50%;
         margin: auto;
+    }
+    div.nav-item i {
+        display: none;
+    }
+    .hidden-nav-container {
+        display: block;
+    }
+    .hidden-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    .hidden-item {
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
     }
 }
